@@ -90,7 +90,7 @@ ggplot(samplePA.fr, aes(x=samplePA.fr[,1], y=samplePA.fr[,2])) + geom_point() + 
 ```r
 Rotation <- factor(c(1,2,2,3,2,3,4,4,2,4))
 sampleREL.fr <- as.data.frame(sampleREL.pcoa)
-ggplot(sampleREL.fr, aes(x=sampleREL.fr[,1], y=sampleREL.fr[,2])) + geom_point(aes(fill=Rotation), colour="black", pch=21, size=3) + geom_text(aes(label=row.names(sampleREL.fr)), size=3, vjust=-1.5, show_guide = FALSE) + labs(title="Principal Coordinate Analysis of 10-year rotation data - Relative Abundance", x="PCoA Axis 1", y="PcoA Axis 2")
+ggplot(sampleREL.fr, aes(x=sampleREL.fr[,1], y=sampleREL.fr[,2])) + geom_point(aes(fill=Rotation), colour="black", pch=21, size=3) + geom_text(aes(label=row.names(sampleREL.fr)), size=3, vjust=-1.5, show_guide = FALSE) + labs(title="Principal Coordinate Analysis of 10-year rotation data - Relative Abundance", x="PCoA Axis 1", y="PcoA Axis 2", fill="Rotation crops")
 ```
 
 ![](Analysis_Species_files/figure-html/unnamed-chunk-8-2.png) 
