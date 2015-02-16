@@ -64,18 +64,12 @@ The heatmap revealed some of the differences observed among samples based on rel
 ```r
 par(mar=c(5,7,1,1))
 hcol <- brewer.pal(n = 9, name = "BuGn")
-heatmap(dataREL,scale = "none", col=hcol, margins=c(10,10))
-```
-
-![](Analysis_Species_files/figure-html/unnamed-chunk-6-1.png) 
-
-```r
 heatmap.2(dataREL,scale = "none", col=hcol, key=TRUE, trace="none", 
           density.info = "none", keysize = 0.7,  margins=c(15,15),
           cexRow = 0.9, cexCol = 0.9)
 ```
 
-![](Analysis_Species_files/figure-html/unnamed-chunk-6-2.png) 
+![](Analysis_Species_files/figure-html/unnamed-chunk-6-1.png) 
 
 Calculation of principal coordinate analysis, the presence/absence did not show any difference among the samples on the hierachical clustering, therefore it will not show any differences in the analysis below.  However, relative abundance has an stronger effect, thus it is easier to observe differences among samples.
 
@@ -96,7 +90,7 @@ ggplot(samplePA.fr, aes(x=samplePA.fr[,1], y=samplePA.fr[,2])) + geom_point() + 
 ```r
 Rotation <- factor(c(1,2,2,3,2,3,4,4,2,4))
 sampleREL.fr <- as.data.frame(sampleREL.pcoa)
-ggplot(sampleREL.fr, aes(x=sampleREL.fr[,1], y=sampleREL.fr[,2])) + geom_point(aes(fill=Rotation), colour="black", pch=21, size=5) + geom_text(aes(label=row.names(sampleREL.fr)), size=4, vjust=-1.5, show_guide = FALSE) + labs(title="Principal Coordinate Analysis of 10-year rotation data - Relative Abundance", x="PCoA Axis 1", y="PcoA Axis 2")
+ggplot(sampleREL.fr, aes(x=sampleREL.fr[,1], y=sampleREL.fr[,2])) + geom_point(aes(fill=Rotation), colour="black", pch=21, size=3) + geom_text(aes(label=row.names(sampleREL.fr)), size=3, vjust=-1.5, show_guide = FALSE) + labs(title="Principal Coordinate Analysis of 10-year rotation data - Relative Abundance", x="PCoA Axis 1", y="PcoA Axis 2")
 ```
 
 ![](Analysis_Species_files/figure-html/unnamed-chunk-8-2.png) 
